@@ -10,4 +10,4 @@ class Card
   end
 end
 
-card = Card.new("What is Virginia Tech's mascot?", "Hokies", :Sports)
+# card = Card.new("What is Virginia Tech's mascot?", "Hokies", :Sports)
