@@ -1,3 +1,4 @@
+require 'pry'
 require './lib/card'
 
 class Turn

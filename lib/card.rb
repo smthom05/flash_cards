@@ -1,3 +1,5 @@
+require 'pry'
+
 class Card
   attr_reader :question,
               :answer,
@@ -9,5 +11,3 @@ class Card
     @category = category
   end
 end
-
-# card = Card.new("What is Virginia Tech's mascot?", "Hokies", :Sports)
