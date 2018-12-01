@@ -3,6 +3,7 @@ require './lib/card'
 require './lib/turn'
 require './lib/deck'
 
+
 class Round
   attr_reader :deck,
               :turns,
@@ -41,7 +42,12 @@ class Round
       correct_answers_by_category =  @correct_answers.find_all do |answer|
         answer.card.category == category
       end
-    return correct_answers_by_category.count
+      return correct_answers_by_category.count
+    end
+
   end
+<<<<<<< HEAD
   
 end
+=======
+>>>>>>> 7722965bcd4e60cf16d446570eb1fc1dcbd16947
