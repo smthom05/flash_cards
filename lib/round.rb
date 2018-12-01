@@ -45,4 +45,20 @@ class Round
       return correct_answers_by_category.count
     end
 
+    def percent_correct
+      number_correct
+
+      percent = (@correct_answers.count / @turns.count.to_f) * 100
+      return percent.round(1)
+    end
+
+    def percent_correct_by_category(category)
+      number_correct
+
+      percent_category = @turns.find_all do |turn|
+        turn.card.category == category
+      end
+      ((number_correct_by_category(category) / percent_category.count.to_f) * 100).round(1)
   end
+
+end
