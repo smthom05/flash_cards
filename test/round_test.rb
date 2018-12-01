@@ -42,7 +42,7 @@ class RoundTest < Minitest::Test
   def test_is_my_turns_array_getting_turns
     new_turn = @round.take_turn("Juneau")
 
-    assert_instance_of EXPECTED, @round.turns
+    assert_equal Turn, @round.turns
   end
 
 
