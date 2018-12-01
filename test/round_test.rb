@@ -29,5 +29,21 @@ class RoundTest < Minitest::Test
     assert_equal [], @round.turns
   end
 
+  def test_what_is_current_card
+    assert_equal @card_1, @round.current_card
+  end
+
+  def test_what_is_new_turn_class
+    new_turn = @round.take_turn("Juneau")
+
+    assert_equal Turn , new_turn.class
+  end
+
+  def test_is_my_turns_array_getting_turns
+    new_turn = @round.take_turn("Juneau")
+
+    assert_instance_of EXPECTED, @round.turns
+  end
+
 
 end
