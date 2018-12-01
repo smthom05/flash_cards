@@ -15,24 +15,18 @@ class DeckTest < Minitest::Test
   end
 
   def test_it_exists
-    @cards = [Card.new("What is the capital of Alaska?", "Juneau", :Geography), Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM), Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)]
-
     deck = Deck.new(@cards)
 
     assert_instance_of Deck, deck
   end
 
   def test_what_are_the_cards
-    @cards = [Card.new("What is the capital of Alaska?", "Juneau", :Geography), Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM), Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)]
-
     deck = Deck.new(@cards)
 
     assert_equal @cards, deck.cards
   end
 
   def test_what_is_the_count
-    @cards = [Card.new("What is the capital of Alaska?", "Juneau", :Geography), Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM), Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)]
-
     deck = Deck.new(@cards)
 
     assert_equal 3, deck.count
