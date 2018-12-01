@@ -43,4 +43,5 @@ class Round
       end
     return correct_answers_by_category.count
   end
+  
 end
