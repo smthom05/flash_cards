@@ -59,6 +59,9 @@ class Round
         turn.card.category == category
       end
       ((number_correct_by_category(category) / percent_category.count.to_f) * 100).round(1)
-  end
+    end
 
-end
+    def start
+    end
+
+  end
