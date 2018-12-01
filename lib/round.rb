@@ -46,8 +46,3 @@ class Round
     end
 
   end
-<<<<<<< HEAD
-  
-end
-=======
->>>>>>> 7722965bcd4e60cf16d446570eb1fc1dcbd16947
