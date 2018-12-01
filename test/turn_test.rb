@@ -1,3 +1,4 @@
+require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/card'
@@ -51,7 +52,6 @@ class TurnTest < Minitest::Test
     card = Card.new("What is the capital of Alaska", "Juneau", :Geography)
     turn = Turn.new("Denver", card)
 
-    assert_equal "WRONG!", turn.feedback
+    assert_equal "Incorrect.", turn.feedback
   end
-
 end
