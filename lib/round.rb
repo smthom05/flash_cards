@@ -62,6 +62,21 @@ class Round
     end
 
     def start
+      puts "Welcome! You're playing with #{@deck.count} cards."
+      puts "-------------------------------------------------"
+
+      @deck.cards.each do |card|
+      puts "This is card number #{@turns.count + 1} out of #{@deck.count}."
+      puts "Question: #{current_card.question}"
+      answer = gets.capitalize.chomp
+      turn = take_turn(answer)
+      puts turn.feedback
+      end
+      puts "****** Game over! ******"
+      puts "You had #{number_correct} correct guesses out of #{@deck.count} for a total score of #{percent_correct}%."
+      puts "Geography: #{percent_correct_by_category(:Geography)}% correct"
+      puts "STEM: #{percent_correct_by_category(:STEM)}% correct"
+      puts "Sports: #{percent_correct_by_category(:Sports)}% correct"
     end
 
   end
