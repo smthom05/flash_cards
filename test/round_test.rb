@@ -42,8 +42,32 @@ class RoundTest < Minitest::Test
   def test_is_my_turns_array_getting_turns
     new_turn = @round.take_turn("Juneau")
 
-    assert_equal Turn, @round.turns
+    assert_equal [new_turn], @round.turns
   end
 
+  def test_what_is_number_correct
+    new_turn = @round.take_turn("Juneau")
+
+    assert_equal 1 , @round.number_correct
+  end
+
+  def test_is_my_current_card_changing
+    new_turn = @round.take_turn("Juneau")
+
+    assert_equal @card_2 , @round.current_card
+  end
+
+  def test_what_is_the_count_of_my_turns_array
+    new_turn = @round.take_turn("Juneau")
+    @round.number_correct
+    new_turn_2 = @round.take_turn("Mars")
+
+    assert_equal 2, @round.turns.count
+  end
+
+  # def test_is_my_feedback_right
+  #   new_turn = @round.take_turn("Juneau")
+  #
+  # end
 
 end
