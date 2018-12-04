@@ -36,7 +36,7 @@ class RoundTest < Minitest::Test
   def test_what_is_new_turn_class
     new_turn = @round.take_turn("Juneau")
 
-    assert_equal Turn , new_turn.class
+    assert_instance_of Turn , new_turn.class
   end
 
   def test_is_my_turns_array_getting_turns

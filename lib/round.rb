@@ -74,7 +74,7 @@ class Round
       end
       puts "****** Game over! ******"
       puts "You had #{number_correct} correct guesses out of #{@deck.count} for a total score of #{percent_correct}%."
-      puts "Geography: #{percent_correct_by_category(:Geography)}% correct"
+      puts " Geography: #{percent_correct_by_category(:Geography)}% correct"
       puts "STEM: #{percent_correct_by_category(:STEM)}% correct"
       puts "Sports: #{percent_correct_by_category(:Sports)}% correct"
     end
